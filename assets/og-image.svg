@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-label="Arc Orthodontics social preview">
+  <rect width="1200" height="630" fill="#0E3826"></rect>
+  <g transform="translate(96 150)">
+    <path d="M16 96 A62 62 0 0 1 108 44" stroke="#EAF6EE" stroke-width="17" stroke-linecap="round"></path>
+    <circle cx="108" cy="44" r="12" fill="#A7D930"></circle>
+  </g>
+  <text x="248" y="240" font-family="&#39;Bricolage Grotesque&#39;, system-ui, sans-serif" font-size="96" font-weight="700" letter-spacing="-3" fill="#EAF6EE">Arc Orthodontics</text>
+  <text x="100" y="360" font-family="&#39;Hanken Grotesk&#39;, system-ui, sans-serif" font-size="44" font-weight="500" fill="#A7D930">Braces &amp; Invisalign in Austin, TX</text>
+  <text x="100" y="430" font-family="&#39;Hanken Grotesk&#39;, system-ui, sans-serif" font-size="34" font-weight="400" fill="rgba(234,246,238,0.8)">See your future smile. An exact price up front. $0 down, 0% interest.</text>
+  <text x="100" y="556" font-family="&#39;Hanken Grotesk&#39;, system-ui, sans-serif" font-size="30" font-weight="600" fill="#EAF6EE">4.9 ★  ·  900 reviews</text>
+</svg>

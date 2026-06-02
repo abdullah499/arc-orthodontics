@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="80" viewBox="0 0 220 80" fill="none" role="img" aria-label="Arc Orthodontics">
+  <g transform="translate(4 6)">
+    <path d="M11 50 A32 32 0 0 1 58 24" stroke="#0C7E47" stroke-width="9" stroke-linecap="round"></path>
+    <circle cx="58" cy="24" r="6.3" fill="#A7D930"></circle>
+  </g>
+  <text x="80" y="52" font-family="&#39;Bricolage Grotesque&#39;, system-ui, sans-serif" font-size="44" font-weight="700" letter-spacing="-1" fill="#1C2620">Arc</text>
+</svg>

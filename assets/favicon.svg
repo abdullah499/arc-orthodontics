@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" role="img" aria-label="Arc Orthodontics favicon">
+  <rect width="100" height="100" rx="24" fill="#0E3826"></rect>
+  <g transform="translate(18 18) scale(0.64)">
+    <path d="M16 72 A46 46 0 0 1 84 34" stroke="#EAF6EE" stroke-width="13" stroke-linecap="round"></path>
+    <circle cx="84" cy="34" r="9" fill="#A7D930"></circle>
+  </g>
+</svg>
