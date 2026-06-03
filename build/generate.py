@@ -42,6 +42,7 @@ def header(active=""):
     '<header class="site"><div class="wrap">'
     '<a class="brand" href="index.html" aria-label="Arc Orthodontics home">' + LOGO + '<b>Arc</b></a>'
     '<nav class="nav" aria-label="Primary">'
+    '<a href="index.html"' + cls("home") + '>Home</a>'
     '<a href="services.html"' + cls("services") + '>Services</a>'
     '<a href="plan.html"' + cls("plan") + '>Plan</a>'
     '<a href="stories.html"' + cls("stories") + '>Stories</a>'

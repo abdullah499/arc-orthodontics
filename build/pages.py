@@ -336,7 +336,7 @@ SVC_RET = service_detail("06","Retention","Retainers and retention",
 
 # ---------- registry ----------
 PAGES = {
- "home": ("index.html","", "Arc Orthodontics — Braces &amp; Invisalign in Austin, TX",
+ "home": ("index.html","home", "Arc Orthodontics — Braces &amp; Invisalign in Austin, TX",
    "Arc Orthodontics in Austin, TX. Braces and Invisalign for teens and adults. See your future smile with a free 3D smile scan, get an honest price, and start with $0 down on 0% plans.", HOME),
  "services": ("services.html","services","Treatments — Arc Orthodontics",
    "Six specialist orthodontic treatments in Austin: Invisalign for adults and teens, ceramic and metal braces, early treatment, and retainers. Clear pricing from $250.", SERVICES),
