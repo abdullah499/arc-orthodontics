@@ -1,70 +1,63 @@
 # Arc Orthodontics — Demo Website
 
-A fast, **fully responsive** marketing site for a fictional orthodontics practice
-(Arc Orthodontics, Austin TX). Built as clean static HTML/CSS/JS — no build step,
-no framework, no dependencies. Works on any phone, tablet, or desktop.
+A fast, **fully responsive, multi-page** marketing site for a fictional orthodontics
+practice (Arc Orthodontics, Austin TX). Clean static HTML/CSS/JS — no framework, no
+build step needed to deploy. Works on any phone, tablet, or desktop.
+
+**Live:** https://arc-orthodontics.netlify.app/
+
+## Pages (21)
+
+Home · New Patients · Services · Plan · The Journey · Smile Stories · Insurance ·
+The Studio · Journal · Contact · Reviews · Treatment Finder · Cost Calculator ·
+Compare · Before & After · and 6 treatment detail pages (Invisalign Adult/Teen,
+Ceramic, Metal, Early Treatment, Retainers).
 
 ```
 arc-orthodontics-site/
-├── index.html        ← the whole site (semantic HTML + inline CSS + vanilla JS)
-├── favicon.svg
-├── netlify.toml      ← Netlify config (publish dir + headers)
-├── .gitignore
-├── README.md
-└── assets/
-    ├── favicon.svg
-    ├── logo-mark.svg
-    ├── logo-lockup.svg
-    └── og-image.svg  ← social share preview (1200×630)
+├── index.html ... + 20 more page .html files   ← the site (one file per page)
+├── assets/
+│   ├── styles.css      ← shared responsive stylesheet
+│   ├── app.js          ← shared JS (menu, calculator, finder, sliders, filters)
+│   ├── favicon.svg / logo-mark.svg / logo-lockup.svg / og-image.svg
+├── build/              ← local generator (NOT deployed; ignored by git)
+│   ├── generate.py     ← run this to regenerate the pages
+│   ├── partials.py     ← reusable widgets
+│   └── pages.py        ← the content of every page
+├── netlify.toml · README.md · .gitignore · favicon.svg
 ```
 
 ## What makes this version solid
 
-- **Mobile-first responsive** — proper breakpoints, a hamburger menu, fluid type,
-  and grids that collapse to one column. No horizontal scrolling on phones.
-- **Crawlable & shareable** — all content and Open Graph / Twitter meta are in the
-  static HTML, so Google indexes it and WhatsApp/LinkedIn/iMessage show a real
-  link-preview card.
+- **Multi-page + mobile-first** — every route is its own real HTML page, with a shared
+  responsive header, hamburger menu, and footer. No horizontal scrolling on phones.
+- **Crawlable & shareable** — all content + Open Graph / Twitter meta live in the static
+  HTML, so Google indexes every page and WhatsApp/LinkedIn/iMessage show a preview card.
 - **Instant load** — no client-side bundle unpacking, no in-browser transpiling.
-- **Interactive, no framework** — working cost calculator, treatment finder,
-  before/after sliders, and FAQ accordion in plain JavaScript.
-- `MedicalBusiness` structured data for rich search results.
+- **Interactive, no framework** — cost calculator, treatment finder, before/after
+  sliders, filter chips, and FAQ accordions in plain JavaScript.
+- `MedicalBusiness` structured data on every page.
 
-> Forms are demo-only (they show a confirmation but don't send anywhere). Wire them
-> to Netlify Forms, Formspree, or your booking tool before going live.
+## Editing the site
 
----
-
-## 1 · Push to GitHub
+Pages are generated from `build/`. To change content, edit `build/pages.py` (text),
+`build/partials.py` (shared widgets), or `assets/styles.css` (design), then run:
 
 ```bash
-cd arc-orthodontics-site
-git init
-git add .
-git commit -m "Arc Orthodontics demo site"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/arc-orthodontics.git
-git push -u origin main
+cd build
+python generate.py     # rewrites all .html files in the project root
 ```
 
-## 2 · Deploy on Netlify
+Static one-off tweaks can also be made directly in the `.html` files.
 
-1. Netlify → **Add new site → Import an existing project → GitHub** → pick the repo.
-2. Build settings: **Build command** empty, **Publish directory** `.` (already set in `netlify.toml`).
-3. **Deploy.** You'll get a live `https://<name>.netlify.app` URL in seconds.
+> Forms are demo-only (they show a confirmation but don't send). Wire them to Netlify
+> Forms or Formspree before going live. The before/after images are stylized
+> placeholders — swap in real, consented patient photos for a real client.
 
-Every future `git push` to `main` auto-deploys.
+## Deploy
 
-**Fast path (no GitHub):** drag this folder onto <https://app.netlify.com/drop>.
-
----
-
-## 3 · Before showing a real client
-
-- Replace the placeholder phone `(512) 555-0148`, address, and the `arcortho.com`
-  URLs in the `<head>` (`canonical`, `og:url`, `og:image`) with the real ones.
-- Swap the before/after illustrations for real (consented) patient photos.
-- Connect the booking form to a real endpoint.
+Pushing to the `main` branch auto-deploys to Netlify. Build command: empty.
+Publish directory: `.`
 
 **Arc Orthodontics** · Braces & Invisalign in Austin, TX
 Brand colors — Forest `#0E3826` · Emerald `#0C7E47` · Lime `#A7D930` · Linen `#F6F7F2`
